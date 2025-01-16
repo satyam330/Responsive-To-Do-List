@@ -70,6 +70,3 @@ ul li{
     justify-content: space-between;
 
 }
-ul li p{
-    flex-grow: 1;
-}

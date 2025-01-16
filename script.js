@@ -9,7 +9,7 @@ const addTodo = () =>{
         return false;
     }
 
-    //Creating p tag !!
+    //Creating p 
     const li =document.createElement("li");
     const p = document.createElement("p");
     p.innerHTML =inputText;
