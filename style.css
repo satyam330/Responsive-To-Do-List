@@ -1,42 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-*{
-    margin:0;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-body{
-    background-color: rgb(232,238 green,238 blue);
+
+body {
+    background-color: rgb(232, 238, 238);
+    padding: 10px; /* Add some padding for better display on mobile */
 }
-.container{
+
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
 }
-.input-container{
+
+.input-container {
     width: 100%;
     max-width: 500px;
     text-align: center;
     padding: 20px;
 }
 
-.input-container input{
- border: none;
- outline: none;
- padding: 12px;
- margin-block: 12px;
- border-radius: 4px;
- font-size: 16px;
+.input-container input {
+    border: none;
+    outline: none;
+    padding: 12px;
+    margin-block: 12px;
+    border-radius: 4px;
+    font-size: 16px;
 }
 
-.input-container input[type="text"]{
-     width: 70%;
+.input-container input[type="text"] {
+    width: 70%;
 }
 
-.input-container input[type="button"]{
+.input-container input[type="button"] {
     background-color: #3da33d;
     color: #fff;
     font-weight: 700;
@@ -45,19 +49,18 @@ body{
     padding: 12px 24px;
 }
 
-.input-container input[type="button"]:hover{
+.input-container input[type="button"]:hover {
     background-color: #60b160;
 }
 
-ul{
+ul {
     width: 100%;
     max-width: 450px;
-    display: flex;
-    /* justify-items: center;
-    flex-direction: column;
-    align-items: center; */
+    margin: 0 auto;
+    padding: 0;
 }
-ul li{
+
+ul li {
     list-style-type: none;
     cursor: pointer;
     margin-block-end: 12px;
@@ -68,5 +71,89 @@ ul li{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-left: 8px;
+    transform: background-color 0.5s;
+}
 
+ul li:hover {
+    background-color: #cbcaca;
+}
+
+ul li p {
+    flex-grow: 1;
+    padding: 2px;
+    margin: 0;
+    word-wrap: break-word; /* Ensure long text wraps correctly */
+}
+
+.btn {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: none;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.deleteBtn {
+    color: #ff0000;
+}
+
+.editBtn {
+    color: #008000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .input-container input[type="text"] {
+        width: 60%; /* Reduce text input width for tablets */
+    }
+
+    .input-container input[type="button"] {
+        padding: 10px 20px;
+        font-size: 14px; /* Slightly reduce button size */
+    }
+
+    ul li {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    ul li p {
+        margin-bottom: 8px; /* Add spacing between text and buttons */
+    }
+
+    .btn {
+        font-size: 14px; /* Adjust button font size */
+        padding: 6px; /* Smaller padding for buttons */
+    }
+}
+
+@media (max-width: 480px) {
+    .input-container {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .input-container input[type="text"] {
+        width: 100%; /* Use full width on very small screens */
+    }
+
+    .input-container input[type="button"] {
+        margin-left: 0; /* Remove margin for better alignment */
+        width: 100%; /* Full-width button */
+    }
+
+    ul li {
+        padding: 8px;
+    }
+
+    ul li p {
+        font-size: 14px; /* Adjust text size */
+    }
+
+    .btn {
+        font-size: 12px; /* Reduce button font size */
+    }
 }
